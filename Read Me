@@ -1,0 +1,73 @@
+# METABRAIN Universe — Mythic Neurotech for Healing & Transformation
+
+A sacred, symbolic platform where cognitive, emotional, and spiritual journeys become rituals of remembrance, resilience, and communal witness. METABRAIN reframes everyday struggles (stress, cravings, low mood, memory challenges) into guided archetypal paths and ceremonies that honor progress as legacy.
+
+Prototype hub: https://thewindowsbrain.ai
+
+---
+
+## Problem statement
+
+- Individuals face stress, anxiety, cravings, and memory challenges that are often treated as isolated symptoms, which can feel clinical and disengaging.
+- Existing tools frequently lack emotional resonance, mythic meaning, and continuity — the elements that help people reshape identity and behavior sustainably.
+- There’s a gap between clinical interventions and personalized symbolic frameworks that guide micro-choices, emotional regulation, and communal belonging.
+
+---
+
+## Solution overview
+
+METABRAIN is a mythic neurotech framework that blends ritualized onboarding, archetype guidance, echo rituals, and communal ceremonies:
+
+- Archetype check-ins (Guardian, Sage, Lotus, Warrior, Cosmic) anchor daily intention and identity.
+- Echo rituals transform cravings, intrusive thoughts, and stress spikes into mindful choices with calming pulses and inscriptions.
+- Communal ceremonies mark resilience milestones (consistency, compassion, connection) with echoes, finale pulses, inscriptions, narrated archive scrolls, chants, and closing whispers.
+- Legacy inscriptions and archive timelines record progress as a living communal story.
+- Resume system ensures seekers return exactly where they left off.
+
+This is a complementary behavioral and symbolic framework — not medical treatment — designed to enrich engagement and meaning alongside professional care.
+
+---
+
+## Demo instructions
+
+Two interactive HTML demos are included:
+
+1) Weight Ritual Path
+- File: `demo-weight-ritual.html`
+- Features: Morning greeting, Craving Ritual button (Return Echo), Evening Reflect (Afterglow), Milestone ceremony.
+- How to run:
+  - Open the file directly in a modern browser (Chrome, Edge, Firefox).
+  - Click “Craving Ritual” to pulse the archetype, “Evening Reflect” to see the afterglow, and “Trigger Weight Milestone” to experience the communal ceremony.
+  - Resume logic: the demo stores ritual phase in localStorage and restores on reload.
+
+2) Mental Health Ritual Path
+- File: `demo-mental-health-ritual.html`
+- Features: Wave Ritual button (soothe/release), Tiny Action pulse for micro-completions, Mental Health Milestone ceremony, Afterglow settle.
+- How to run:
+  - Open the file directly in a browser.
+  - Click “Wave Ritual” to start an echo ritual and “Tiny Action” to log a small completion; trigger the milestone to run the ceremony.
+  - Resume logic: localStorage restores the last phase.
+
+Optional: Place audio files referenced by IDs in an `audio/` folder (e.g., `echo-tone.mp3`, `cosmic-chant.mp3`, whisper tracks). If unavailable, the demos still run; audio calls will simply be silent.
+
+---
+
+## Impact
+
+- Mental health: Provides ritualized emotional regulation, identity reframing, and communal witness to counter isolation and rumination.
+- Weight: Supports sustainable habit formation through mythic reframing, craving interrupt rituals, and consistent identity cues.
+- Memory: Honors continuity via inscriptions and narrated archives; rituals of remembrance strengthen engagement and self-story.
+- Communal healing: Ceremonies turn personal milestones into shared resonance, motivating growth without shame.
+
+Alignment with Microsoft/GitHub:
+- Demonstrates potential integrations with Azure AI (speech, sentiment, personalization) and Copilot (guided prompts, knowledge).
+- Offers a mythic challenge framework other teams can extend (new archetypes, rituals, visualizers, and soundscapes).
+
+---
+
+## Call to action
+
+- Explore the prototype hub: https://thewindowsbrain.ai
+- Try the demos by opening the HTML files locally.
+- Collaborate or partner: METABRAIN is actively positioned for acquisition or strategic partnership; contributions and extensions welcome.
+
