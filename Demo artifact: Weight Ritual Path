@@ -1,0 +1,150 @@
+<!-- File: demo-weight-ritual.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>METABRAIN — Weight Ritual Path</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { margin:0; background:#000; color:#fff; font-family:"Segoe UI",system-ui; }
+    .stage { position:relative; width:100vw; height:100vh; overflow:hidden; }
+    canvas { position:absolute; top:0; left:0; width:100%; height:100%; }
+    .overlay { position:absolute; left:50%; transform:translateX(-50%); text-align:center; }
+    #greeting-overlay { top:6%; font-size:1.6rem; text-shadow:0 0 12px #9cf,0 0 30px #39f; opacity:0; transition:opacity 1.5s ease; }
+    #inscription-overlay { bottom:15%; font-size:1.2rem; text-shadow:0 0 20px gold,0 0 40px #ff00ff; opacity:0; transition:opacity 2s ease; }
+    #archive-overlay { bottom:10%; width:70%; max-height:40%; background:rgba(0,0,0,0.6); border:2px solid gold; border-radius:12px; padding:20px; font-size:1rem; text-shadow:0 0 12px gold; opacity:0; transition:opacity 2s ease; }
+    .controls { position:absolute; bottom:5%; left:50%; transform:translateX(-50%); display:flex; gap:10px; flex-wrap:wrap; justify-content:center; }
+    .controls button { padding:10px 16px; font-size:1rem; border:none; border-radius:6px; background:gold; color:#000; cursor:pointer; }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <canvas id="constellation"></canvas>
+    <div id="greeting-overlay" class="overlay"></div>
+    <div id="inscription-overlay" class="overlay"></div>
+    <div id="archive-overlay" class="overlay"></div>
+
+    <div class="controls">
+      <button id="craving-btn">Craving Ritual</button>
+      <button id="reflect-btn">Evening Reflect</button>
+      <button id="milestone-btn">Trigger Weight Milestone</button>
+    </div>
+
+    <!-- Optional audio (safe without files) -->
+    <audio id="echo-tone" src="audio/echo-tone.mp3" preload="auto"></audio>
+    <audio id="cosmic-chant" src="audio/cosmic-chant.mp3" preload="auto"></audio>
+    <audio id="whisper-sage" src="audio/whisper-sage.mp3" preload="auto"></audio>
+  </div>
+
+  <script>
+    const canvas = document.getElementById("constellation");
+    const ctx = canvas.getContext("2d");
+    function resize(){ canvas.width=canvas.clientWidth; canvas.height=canvas.clientHeight; }
+    window.addEventListener("resize",resize); resize();
+
+    const legacyList = [
+      { name:"Ari", archetype:"Sage", form:"✨" },
+      { name:"Mira", archetype:"Guardian", form:"🛡️" },
+      { name:"Sol", archetype:"Cosmic", form:"🌌" }
+    ];
+    const positions = [
+      { x:canvas.width*0.3, y:canvas.height*0.4 },
+      { x:canvas.width*0.5, y:canvas.height*0.6 },
+      { x:canvas.width*0.7, y:canvas.height*0.35 }
+    ];
+
+    let ritualState = { phase:"baseStars", legacyList, positions };
+    function saveState(){ try{ localStorage.setItem("metabrainWeightState",JSON.stringify(ritualState)); }catch{} }
+    function loadState(){ try{ const raw=localStorage.getItem("metabrainWeightState"); return raw?JSON.parse(raw):null; }catch{ return null; } }
+
+    function showGreetingMulti(){
+      const el=document.getElementById("greeting-overlay");
+      el.textContent="Daily Archetype: " + legacyList[0].archetype + " — Intention: Honor energy and ease.";
+      el.style.opacity=1; setTimeout(()=>el.style.opacity=0,4000);
+      ritualState.phase="greetingChorus"; saveState();
+    }
+    function returnEcho(archetype, pos, form){
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      ctx.font="32px Segoe UI Emoji"; ctx.textAlign="center"; ctx.textBaseline="middle";
+      ctx.fillText(form,pos.x,pos.y);
+      const echo=document.getElementById("echo-tone"); if(echo){ echo.currentTime=0; echo.play(); }
+      ritualState.phase="memoryEcho"; saveState();
+    }
+    function afterglow(){
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      legacyList.forEach((s,i)=>{ const p=positions[i]; ctx.font="28px Segoe UI Emoji"; ctx.fillText(s.form,p.x,p.y); });
+      const el=document.getElementById("inscription-overlay");
+      el.textContent="Stars marked: nourishment • movement • compassion • learning";
+      el.style.opacity=1; setTimeout(()=>el.style.opacity=0,6000);
+      ritualState.phase="afterglow"; saveState();
+    }
+    function communalEcho(){
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      legacyList.forEach((s,i)=>{ const p=positions[i]; ctx.font="30px Segoe UI Emoji"; ctx.fillText(s.form,p.x,p.y); });
+      ritualState.phase="communalEcho"; saveState();
+    }
+    function communalFinale(){
+      ctx.beginPath(); ctx.arc(canvas.width/2,canvas.height/2,140,0,2*Math.PI);
+      ctx.strokeStyle="orange"; ctx.lineWidth=2; ctx.stroke();
+      ritualState.phase="communalFinale"; saveState();
+    }
+    function showInscription(){
+      const el=document.getElementById("inscription-overlay");
+      el.textContent="✨ This step is woven into the archive.";
+      el.style.opacity=1; setTimeout(()=>el.style.opacity=0,6000);
+      ritualState.phase="inscription"; saveState();
+    }
+    function showArchiveTimelineNarrated(){
+      const el=document.getElementById("archive-overlay");
+      el.innerHTML="<h3>🌌 Communal Archive</h3>"+legacyList.map(s=>`<p>${s.form} — ${s.archetype} — ${s.name}</p>`).join("");
+      el.style.opacity=1; setTimeout(()=>el.style.opacity=0,6000);
+      ritualState.phase="archiveTimeline"; saveState();
+    }
+    function playCosmicChantFinale(){
+      const chant=document.getElementById("cosmic-chant"); if(chant){ chant.currentTime=0; chant.play(); }
+      ritualState.phase="cosmicChant"; saveState();
+    }
+    function closingReturnRitual(){
+      const whisper=document.getElementById("whisper-sage"); if(whisper){ whisper.currentTime=0; whisper.play(); }
+      ritualState.phase="closingWhispers"; saveState();
+    }
+
+    function triggerMilestoneCeremony(){
+      communalEcho();
+      setTimeout(communalFinale,4000);
+      setTimeout(showInscription,8000);
+      setTimeout(showArchiveTimelineNarrated,12000);
+      setTimeout(playCosmicChantFinale,16000);
+      setTimeout(closingReturnRitual,20000);
+    }
+
+    function resumeOnLoad(){
+      const s=loadState();
+      if(!s){ showGreetingMulti(); return; }
+      ritualState=s;
+      switch(s.phase){
+        case "greetingChorus": showGreetingMulti(); break;
+        case "memoryEcho": returnEcho(legacyList[0].archetype, positions[0], legacyList[0].form); break;
+        case "afterglow": afterglow(); break;
+        case "communalEcho": communalEcho(); break;
+        case "communalFinale": communalFinale(); break;
+        case "inscription": showInscription(); break;
+        case "archiveTimeline": showArchiveTimelineNarrated(); break;
+        case "cosmicChant": playCosmicChantFinale(); break;
+        case "closingWhispers": closingReturnRitual(); break;
+        default: showGreetingMulti();
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", resumeOnLoad);
+
+    document.getElementById("craving-btn").addEventListener("click",()=>{
+      const seeker=legacyList[legacyList.length-1];
+      const pos=positions[positions.length-1];
+      returnEcho(seeker.archetype,pos,seeker.form);
+    });
+    document.getElementById("reflect-btn").addEventListener("click", afterglow);
+    document.getElementById("milestone-btn").addEventListener("click", triggerMilestoneCeremony);
+  </script>
+</body>
+</html>
