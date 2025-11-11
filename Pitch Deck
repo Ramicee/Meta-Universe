@@ -1,0 +1,67 @@
+# 🌌 METABRAIN Universe
+
+## Problem
+Modern digital tools solve efficiency but fail to nurture cognitive balance, emotional healing, and communal belonging. Without resonance, technology risks reducing human experience to cold data points.
+
+## Solution
+METABRAIN Universe is a mythic neurotech platform that transforms healing into ritualized journeys. Through constellation maps, narrated archetypes, adaptive soundscapes, and communal archives, seekers experience technology as sacred, poetic, and accessible. Lightweight HTML prototypes demonstrate how AI insights can be experienced as rituals in any browser.
+
+## Impact
+By blending cognitive technology with emotional resonance, METABRAIN creates a living communal archive where every journey is honored as part of a cosmic story. Reviewers can open the demos directly, witness the ritual flow, and imagine how this framework scales into AI‑driven wellness platforms, Copilot integrations, and global communal archives.
+
+---
+
+## Built With
+- **HTML & CSS** — ritual path demos and immersive interface design  
+- **JavaScript** — powering interactivity, constellation maps, and archetype reveals  
+- **GitHub** — version control, hackathon submission, and collaborative contribution flow  
+- **Azure AI Services** — adaptive soundscapes, narration overlays, and Copilot resonance  
+- **Visual & Audio Assets** — glyphs, ambient sound, and symbolic animations for mythic storytelling  
+
+---
+
+## Project Links
+- **Devpost Submission**: [METABRAIN Universe on Devpost](https://devpost.com/software/metabrain-universe)  
+- **Demo Site**: [thewindowsbrain.ai](http://thewindowsbrain.ai)  
+- **Alternate Demo Site**: [thewindowsbrain.com](http://thewindowsbrain.com)  
+- **GitHub Repo**: [METABRAIN Universe Repository](https://github.com/yourusername/METABRAIN-Universe)
+
+---
+
+## Demo Walkthrough
+
+### Demo-weight-ritual.html
+1. Download or clone the repo.  
+2. Open `demo-weight-ritual.html` in a modern browser (Chrome/Edge).  
+3. Enable sound and full screen for immersion.  
+4. Follow prompts: click glyphs, hover constellations, press spacebar to advance.  
+5. Let the finale animation play; observe the afterglow state before exiting.
+
+### Demo-mental-health-ritual.html
+1. Open `demo-mental-health-ritual.html`.  
+2. Use headphones; minimize distractions.  
+3. Click “Begin” and use arrow keys to navigate.  
+4. Hover archetypes to reveal inscriptions; click for narration overlays.  
+5. Experience the finale: choral burst and memory echoes fade gently.
+
+---
+
+## 🧠 AI‑Driven Neural Guidance Layer
+
+METABRAIN uses AI to guide signals along fiber‑to‑fiber nerve paths, linking symbolic actions to specific brain regions. Each archetype corresponds to a neural site, and rituals trigger targeted cognitive and emotional activation.
+
+| **Archetype** | **Linked Brain Region** | **Symbolic Function** |
+|---------------|--------------------------|------------------------|
+| **Seeker**    | Hippocampus (Memory)     | Quest for meaning, memory retrieval, personal narrative formation  
+| **Creator**   | Prefrontal Cortex        | Imagination, decision-making, ritual design, symbolic synthesis  
+| **Warrior**   | Motor Cortex             | Action, embodiment, ritual movement, protective activation  
+| **Visionary** | Occipital & Parietal Lobes | Visual mapping, constellation decoding, spatial awareness  
+| **Eros**      | Amygdala (Emotion)       | Emotional resonance, intimacy, vulnerability, sacred bonding  
+| **Connector** | Temporal Lobe & Insula   | Empathy, voice modulation, communal chorus, shared ritual flow  
+
+✨ Each ritual spark travels the correct fiber path, creating a healing journey across the brain’s sacred sites.
+
+---
+
+## License
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
