@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meta-Universe Project</title>
+  <meta charset="UTF-8">
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+    h1 { color: #4B0082; }
+    p { font-size: 18px; }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the Meta-Universe 🌌</h1>
+  <p>This is the official hackathon project site.</p>
+  <p>Explore our vision of interconnected virtual worlds.</p>
+</body>
+</html>
