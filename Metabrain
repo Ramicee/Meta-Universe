@@ -1,0 +1,154 @@
+# Metabrain System  
+A Neuro‑Symbolic Architecture for Adaptive Learning, Emotional Resonance, and Identity Pathways
+
+## Overview
+Metabrain is a neuro‑symbolic system that unifies AI mapping, user intention, and immersive delivery into a single adaptive architecture. It routes experiences through three internal layers—Mind, Metaheart, Spirit—using a Willpower‑Guided Fiber System and an Adaptive Memory Engine.
+
+Metabrain is designed to run natively on Azure and can be implemented across web, mobile, and XR clients.
+
+---
+
+## Core Concepts
+
+### Internal Layers
+- **Mind Layer** — conceptual and analytical processing  
+- **Metaheart Layer** — emotional and identity‑shaping processing  
+- **Spirit Layer** — meaning, purpose, and coherence processing  
+
+These layers are symbolic cognitive domains, not biological structures.
+
+---
+
+## System Architecture
+
+### Key Components
+- **Intention Interface Service**  
+  Receives user’s target layer selection.
+
+- **AI Mapping Engine**  
+  Generates possible internal pathways based on content and user patterns.
+
+- **Routing Orchestrator (Willpower‑Guided Fiber System)**  
+  Combines AI mapping with user intention to select the final route.
+
+- **Module Services**  
+  - Mind Module  
+  - Metaheart Module  
+  - Spirit Module  
+
+- **Adaptive Memory Engine**  
+  Tracks and reinforces pathway usage patterns.
+
+- **Immersive Delivery Service**  
+  Generates final scene configuration for the client.
+
+---
+
+## Adaptive Loop
+The core loop of Metabrain:
+
+```
+AI proposes → Willpower directs → Memory reinforces → AI adapts
+```
+
+This creates personalized cognitive‑emotional pathways over time.
+
+---
+
+## Data Model (High‑Level)
+
+### UserPatternProfile
+Tracks layer weights and template usage.
+
+### ExperienceDefinition
+Defines content and available symbolic templates.
+
+### RouteSelectionLog
+Stores pathway selections for adaptive reinforcement.
+
+---
+
+## API Sketch
+
+### POST /intention/select-layer
+Routes an experience to a target layer.
+
+### GET /user/pattern-profile/{user_id}
+Returns adaptive pattern profile.
+
+### POST /experience/render
+Orchestrates mapping → routing → module → delivery.
+
+---
+
+## Immersive Delivery
+The client receives a `scene_config` JSON describing:
+
+- scene type  
+- symbolic template  
+- color palette  
+- motion profile  
+- symbolic elements  
+- text overlays  
+
+The client renders the scene using WebGL, Unity, Unreal, or any immersive framework.
+
+---
+
+## Repository Structure (Suggested)
+
+```
+/metabrain
+  /docs
+    architecture.md
+    mind-module.md
+    metaheart-module.md
+    spirit-module.md
+    willpower-fiber-system.md
+    adaptive-memory-engine.md
+    immersive-delivery.md
+  /services
+    /intention-interface
+    /ai-mapping-engine
+    /routing-orchestrator
+    /modules
+      /mind
+      /metaheart
+      /spirit
+    /adaptive-memory
+    /immersive-delivery
+  /client
+    /web
+    /mobile
+    /xr
+  README.md
+```
+
+---
+
+## Implementation Priorities (Prototype)
+
+1. Basic UI for layer selection  
+2. Rule‑based AI Mapping Engine  
+3. Routing Orchestrator with simple weighting  
+4. Adaptive Memory Engine storing layer counts  
+5. Immersive Delivery returning JSON scene configs  
+6. Client rendering symbolic scenes per layer  
+
+---
+
+## Documentation
+
+- [Architecture](docs/architecture.md)  
+- [Mind Module](docs/mind-module.md)  
+- [Metaheart Module](docs/metaheart-module.md)  
+- [Spirit Module](docs/spirit-module.md)  
+- [Willpower‑Guided Fiber System](docs/willpower-fiber-system.md)  
+- [Adaptive Memory Engine](docs/adaptive-memory-engine.md)  
+- [Immersive Delivery Layer](docs/immersive-delivery.md)
+
+---
+
+## Status
+Metabrain is now fully defined at the architectural, conceptual, and technical levels.  
+This repository structure and documentation provide a clear foundation for prototype development.
